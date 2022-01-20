@@ -53,6 +53,7 @@
                 </audio>
                 <input type="file" class="form-control" id="file" name="file" value="">                
             </div>
+            <br>
             @endforeach
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

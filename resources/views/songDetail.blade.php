@@ -13,10 +13,10 @@
                        <td><h4><b>{{$song->name}}<br></b></h4> </td> 
 
                        @foreach($artists as $artist)               
-                        <td>Artist:{{$artist->name}}</td><br>
+                        <td>Artist: {{$artist->name}}</td><br>
                         @endforeach
                         
-                        <td>Duration:{{$song->duration}}</td><br><br>
+                        <td>Duration: {{$song->duration}}</td><br><br>
                         
                         <td><audio controls style="width:250px;">
                             <source src="{{asset('songmp3')}}/{{$song->file}}"></source>

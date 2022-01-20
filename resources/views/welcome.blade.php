@@ -68,7 +68,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://wowslider.com/sliders/demo-77/data1/images/idaho239691_1920.jpg" class="d-block w-80" alt="...">
+      <img src="SQQ.jpg" class="d-block w-80" alt="...">
     </div>
     <div class="carousel-item">
       <img src="https://wowslider.com/sliders/demo-77/data1/images/road220058.jpg" class="d-block w-80" alt="...">

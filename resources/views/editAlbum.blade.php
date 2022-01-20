@@ -46,6 +46,7 @@
                 <input type="date" class="form-control" id="dateReleased" name="dateReleased" value="{{$album->dateReleased}}">                
             </div>
             @endforeach
+            <br>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
         <br><br>

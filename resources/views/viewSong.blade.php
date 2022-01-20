@@ -7,13 +7,15 @@
             padding:10px;">       
                     <tr>                      
                        <h4><b><td>{{$song->name}}</td><br></b></h4> 
-                        <td>Artist:{{$song->arName}}</td><br>
-                        <td>Music Type:{{$song->mName}}</td><br>
-                        <td>Duration:{{$song->duration}}</td><br>  
+                        <p style="color:hsl(240,100%,50%);">Artist:   {{$song->arName}}</p>
+                        <p style="color:hsl(240,100%,50%);">Music Type:   {{$song->mName}}</p>
+                        <p style="color:hsl(240,100%,50%);">Duration:   {{$song->duration}}</p>
                         <td><audio controls style="width:250px;">
                    <source src="{{asset('songmp3')}}/{{$song->file}}"></source>
                 </audio>
+                   <br> <br>
                         <td>Lyrics:<br>
+                        <br>
                         <p>{!! nl2br($song->lyrics) !!}</p>
                         </td><br>
                         <br>
