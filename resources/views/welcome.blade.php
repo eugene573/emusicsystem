@@ -11,8 +11,7 @@
     <title>EMusic</title>
   </head>
   <body>
-
-
+  <div class="bg-secondary text-white">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">EMusic</a>
@@ -52,14 +51,22 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
-      </form>
+      <form class="d-flex" action="{{route('search.song')}}" method="POST">
+                        @csrf
+                        <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+     </form>
     </div>
   </div>
 </nav>
+<!--Content(Slide)-->
 
+<div class="m-2">
+  <br>
+  <h2><b>Today's biggest hits</b></h2>
+  <br>
+</div>
+<center>
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -68,13 +75,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="SQQ.jpg" class="d-block w-80" alt="...">
+      <img src="{{url('/images/welcome.jpeg')}}" class="d-block" alt="..."style="width:60%;height:550px;">
     </div>
     <div class="carousel-item">
-      <img src="https://wowslider.com/sliders/demo-77/data1/images/road220058.jpg" class="d-block w-80" alt="...">
+      <img src="{{url('/images/Sam_Smith_-_Love_Goes.png')}}" class="d-block" alt="..."style="width:60%;height:550px;">
     </div>
     <div class="carousel-item">
-      <img src="https://wowslider.com/sliders/demo-77/data1/images/field175959_1920.jpg" class="d-block w-180" alt="...">
+      <img src="{{url('/images/Silk_Sonic_-_An_Evening_with_Silk_Sonic.png')}}" class="d-block" alt="..."style="width:60%;height:550px;">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -86,7 +93,31 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+</center>
+<br>
+  </div>
 
+
+  <main class="py-4">
+            @yield('content')
+            <!--Footer-->
+<section class="copyright bg-dark white-text py-2 mt-0" id="copyright">
+  <div class="container">
+      <div class="row text-center">
+             <div style="color: skyblue; font-size: 16px; float: left;" align="left">
+              <small>Contact Us: </small></br>
+              <small>20/2, Jalan Enjoy, Taman Kampung Kura , 82000, Johor.</small></br>
+              <small>EMusic.com</small> </br>
+              <small> +016 1234567</small>
+             </div>
+
+             <div class="col-sm-5 col-md-12 col-lg-12" align="text-center" style="color:white;"> 
+             <small>© Copyright 2022 EMusic Property. All Rights Reserved.</small></br>
+             <small> Made with by ABC Company</small>
+              </div>
+</div>
+        </main>
+    </div>
       
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
